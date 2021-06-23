@@ -1,0 +1,5 @@
+(defrule apple_iphone (venta (nombre_prod "Iphone 12") (metodo_pago "Credito") ) => (printout t "12 Meses sin Intereses @"))
+(defrule apple_macbook (venta (nombre_prod "MacBook Pro 2019") (metodo_pago "Credito") ) => (printout t "12 Meses sin Intereses @"))
+(defrule rtx_3080 (venta (nombre_prod "RTX 3080") ) => (printout t "10% de Descuento @"))
+(defrule rtx_3060 (venta (nombre_prod "RTX 3060") ) => (printout t "10% de Descuento @"))
+(defrule bono_5 ?a <- (venta (precio ?p) (metodo_pago "Contado")) (test(> ?p 30000)) => (printout t "Bono $5,000 @"))
